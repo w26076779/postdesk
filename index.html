@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postdesk</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --bg: #f7f8fa; --surface: #fff; --ink: #16181d; --ink-2: #5b6170;
+    --ink-3: #8b909d; --lijn: #e3e6ec; --accent: #5b5bd6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101215; --surface: #181b20; --ink: #eef0f4; --ink-2: #a3aab8;
+      --ink-3: #757c8a; --lijn: #272b32;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 15px; line-height: 1.6;
+  }
+  main { max-width: 620px; margin: 0 auto; padding: 64px 20px 80px; }
+  h1 { font-size: 30px; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .sub { color: var(--ink-2); margin: 0 0 40px; font-size: 17px; }
+  h2 { font-size: 17px; margin: 36px 0 10px; }
+  ul { padding-left: 20px; color: var(--ink-2); }
+  li { margin-bottom: 6px; }
+  .kaart {
+    background: var(--surface); border: 1px solid var(--lijn);
+    border-radius: 10px; padding: 20px; margin: 28px 0;
+  }
+  footer {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--lijn);
+    font-size: 14px; color: var(--ink-3);
+  }
+  footer a { color: var(--ink-2); margin-right: 18px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Postdesk</h1>
+  <p class="sub">A dashboard for publishing our own video content to TikTok, Instagram and YouTube from one place.</p>
+
+  <div class="kaart">
+    <strong>This is an internal tool.</strong> It is used only by our own team to
+    publish content to social media accounts we own. It is not offered to, or
+    usable by, third parties.
+  </div>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>Select a video from the computer and preview it before anything is sent</li>
+    <li>Write one caption that is adapted per account and per brand</li>
+    <li>Choose which connected accounts to publish to</li>
+    <li>Set the platform options for each post, with nothing preselected</li>
+    <li>Review exactly what will be published, and confirm before it is sent</li>
+  </ul>
+
+  <h2>How we use the TikTok API</h2>
+  <ul>
+    <li><strong>Login Kit</strong> authenticates the owner of the account and shows
+        the creator nickname in the dashboard, so the correct account is confirmed
+        before posting.</li>
+    <li><strong>Content Posting API</strong> uploads the selected video using Direct
+        Post. The creator's current settings are fetched and displayed first. The
+        user actively selects a privacy level, can disable comments, duet and
+        stitch, and declares commercial content where it applies.</li>
+  </ul>
+
+  <h2>How we use the YouTube and Instagram APIs</h2>
+  <ul>
+    <li><strong>YouTube Data API</strong> uploads the video to our own channel, with
+        the visibility and made-for-kids declaration set by the user.</li>
+    <li><strong>Instagram Graph API</strong> publishes the video as a Reel to our own
+        professional account.</li>
+  </ul>
+
+  <h2>Data</h2>
+  <p style="color:var(--ink-2)">
+    We store only the access tokens needed to publish on behalf of accounts we own.
+    We do not collect data about viewers, followers or any other person. See the
+    privacy policy for details.
+  </p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </footer>
+
+</main>
+</body>
+</html>
